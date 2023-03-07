@@ -2,7 +2,7 @@
 
 Submitted by: **Kelly Bonilla Guzman**
 
-*Flixster** is a movie browsing app that provides users detailed information on the latest movies. This information includes the movies titles,
+*Flixster* is a movie browsing app that provides users detailed information on the latest movies. This information includes the movies titles,
 description, vote average, vote count, popularity, poster image, and backdrop image.
 
 Time spent: **10** hours spent in total
