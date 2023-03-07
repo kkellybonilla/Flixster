@@ -13,6 +13,10 @@
 		C12D9CCE29B5C3590012F769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12D9CCC29B5C3590012F769 /* Main.storyboard */; };
 		C12D9CD029B5C35B0012F769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C12D9CCF29B5C35B0012F769 /* Assets.xcassets */; };
 		C12D9CD329B5C35B0012F769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C12D9CD129B5C35B0012F769 /* LaunchScreen.storyboard */; };
+		C12D9CDC29B5C7BC0012F769 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D9CDB29B5C7BC0012F769 /* Movie.swift */; };
+		C12D9CDF29B5CA1A0012F769 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = C12D9CDE29B5CA1A0012F769 /* Nuke */; };
+		C12D9CE129B5D1330012F769 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D9CE029B5D1330012F769 /* MovieCell.swift */; };
+		C12D9CE329B5DB610012F769 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12D9CE229B5DB610012F769 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		C12D9CCF29B5C35B0012F769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C12D9CD229B5C35B0012F769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C12D9CD429B5C35B0012F769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C12D9CDB29B5C7BC0012F769 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C12D9CE029B5D1330012F769 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		C12D9CE229B5DB610012F769 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12D9CDF29B5CA1A0012F769 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,26 @@
 		C12D9CC529B5C3590012F769 /* project2-FlixsterPt1 */ = {
 			isa = PBXGroup;
 			children = (
+				C12D9CDA29B5C7860012F769 /* Models */,
 				C12D9CC629B5C3590012F769 /* AppDelegate.swift */,
 				C12D9CC829B5C3590012F769 /* SceneDelegate.swift */,
+				C12D9CE029B5D1330012F769 /* MovieCell.swift */,
 				C12D9CCA29B5C3590012F769 /* ViewController.swift */,
+				C12D9CE229B5DB610012F769 /* DetailViewController.swift */,
 				C12D9CCC29B5C3590012F769 /* Main.storyboard */,
 				C12D9CCF29B5C35B0012F769 /* Assets.xcassets */,
 				C12D9CD129B5C35B0012F769 /* LaunchScreen.storyboard */,
 				C12D9CD429B5C35B0012F769 /* Info.plist */,
 			);
 			path = "project2-FlixsterPt1";
+			sourceTree = "<group>";
+		};
+		C12D9CDA29B5C7860012F769 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C12D9CDB29B5C7BC0012F769 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = "project2-FlixsterPt1";
+			packageProductDependencies = (
+				C12D9CDE29B5CA1A0012F769 /* Nuke */,
+			);
 			productName = "project2-FlixsterPt1";
 			productReference = C12D9CC329B5C3590012F769 /* project2-FlixsterPt1.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = C12D9CBA29B5C3590012F769;
+			packageReferences = (
+				C12D9CDD29B5CA1A0012F769 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = C12D9CC429B5C3590012F769 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +165,9 @@
 			files = (
 				C12D9CCB29B5C3590012F769 /* ViewController.swift in Sources */,
 				C12D9CC729B5C3590012F769 /* AppDelegate.swift in Sources */,
+				C12D9CDC29B5C7BC0012F769 /* Movie.swift in Sources */,
+				C12D9CE329B5DB610012F769 /* DetailViewController.swift in Sources */,
+				C12D9CE129B5D1330012F769 /* MovieCell.swift in Sources */,
 				C12D9CC929B5C3590012F769 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C12D9CDD29B5CA1A0012F769 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C12D9CDE29B5CA1A0012F769 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12D9CDD29B5CA1A0012F769 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C12D9CBB29B5C3590012F769 /* Project object */;
 }
