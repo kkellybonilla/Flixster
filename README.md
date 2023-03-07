@@ -31,6 +31,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+<img src='project-flixsterpt1-portrait.gif' title='Flixster App Walkthrough (Portrait)' width='' alt='Flixster App Walkthrough (Portrait)' />
 <img src='project-flixsterpt1-landscape.gif' title='Flixster App Walkthrough (Landscape)' width='' alt='Flixster App Walkthrough (Landscape)' />
 
 <!-- Replace this with whatever GIF tool you used! -->
