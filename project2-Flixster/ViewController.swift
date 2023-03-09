@@ -86,7 +86,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Get the movie that corresponds to the table view row
         let movie = movies[indexPath.row]
         
-        // Configure the cell with it's associated track
+        // Configure the cell with it's associated movie
         cell.configure(with: movie)
         
         // return the cell for display in the table view

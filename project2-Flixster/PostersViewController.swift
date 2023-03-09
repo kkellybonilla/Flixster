@@ -12,7 +12,7 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var posters: [Poster] = []
+    var movies: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +38,15 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
             let decoder = JSONDecoder()
             do {
                 // Try to parse the response into our custom model
-                let response = try decoder.decode(PostersResponse.self, from: data)
-                let posters = response.results
+                let response = try decoder.decode(MoviesResponse.self, from: data)
+                let movies = response.results
                 
                 DispatchQueue.main.async {
-                    self?.posters = posters
+                    self?.movies = movies
                     self?.collectionView.reloadData()
                 }
                 
-                print(posters)
+                print(movies)
                 
             } catch {
                 print(error.localizedDescription)
@@ -70,21 +70,21 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
         // The minimum spacing between adjacent cells (top / bottom, in vertical scrolling collection)
         // Set this to taste.
         layout.minimumLineSpacing = 0
-        
+
         // Set this to however many columns you want to show in the collection.
         let numberOfColumns: CGFloat = 3
-        
+
         // Calculate the width each cell need to be to fit the number of columns, taking into account the spacing between cells.
         let width = (collectionView.bounds.width - layout.minimumInteritemSpacing * (numberOfColumns - 1)) / numberOfColumns
 
-        // Set the size that each tem/cell should display at
-        layout.itemSize = CGSize(width: width, height: width)
+        // Set the size that each item/cell should display at
+        layout.itemSize = CGSize(width: width, height: 180)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         // the number of items shown should be the number of posters we have.
-        posters.count
+        movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -93,26 +93,34 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
 
             // Use the indexPath.item to index into the albums array to get the corresponding album
-            let poster = posters[indexPath.item]
+            let movie = movies[indexPath.item]
 
             // Get the artwork image url
-        let imageUrl = URL(string: "https://www.themoviedb.org/t/p/w1280" + poster.posterPath)
+            let imageUrl = URL(string: "https://www.themoviedb.org/t/p/w1280" + movie.posterPath)
 
             // Set the image on the image view of the cell
-        Nuke.loadImage(with: imageUrl!, into: cell.posterImageView)
+            Nuke.loadImage(with: imageUrl!, into: cell.posterImageView)
 
             return cell
     }
-
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Get the cell that triggered the segue
+        if let cell = sender as? UICollectionViewCell,
+           // Get the index path of the cell from the collection view
+            let indexPath = collectionView.indexPath(for: cell),
+            // Get the detail view controller
+            let detailViewController = segue.destination as? DetailViewController {
+            
+            // Use the index path to get the associated movie
+            let movie = movies[indexPath.item]
+            
+            // Set the movie on the detail view controller
+            detailViewController.movie = movie
+        }
     }
-    */
-
+    
 }

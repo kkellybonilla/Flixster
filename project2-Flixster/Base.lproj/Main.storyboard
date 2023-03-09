@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -119,8 +118,8 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ocj-lI-NPX">
                                 <rect key="frame" x="16" y="103" width="361" height="666"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2OG-Ol-X2B">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="2OG-Ol-X2B">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -136,13 +135,17 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ebc-oY-L2h">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="N9x-fK-p5r"/>
+                                                        <constraint firstAttribute="height" constant="150" id="OW2-oe-eZI"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ebc-oY-L2h" firstAttribute="leading" secondItem="jGX-Pc-C7L" secondAttribute="leading" id="PJc-ap-Uns"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ebc-oY-L2h" secondAttribute="trailing" id="kVn-hk-KAy"/>
-                                                <constraint firstItem="Ebc-oY-L2h" firstAttribute="top" secondItem="jGX-Pc-C7L" secondAttribute="top" id="mC5-bR-Dte"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ebc-oY-L2h" secondAttribute="bottom" id="mVx-W1-gMZ"/>
+                                                <constraint firstItem="Ebc-oY-L2h" firstAttribute="leading" secondItem="jGX-Pc-C7L" secondAttribute="leading" id="2jL-FW-NKI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ebc-oY-L2h" secondAttribute="trailing" id="AgA-ca-BGR"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ebc-oY-L2h" secondAttribute="bottom" id="Yes-sU-Op8"/>
+                                                <constraint firstItem="Ebc-oY-L2h" firstAttribute="top" secondItem="jGX-Pc-C7L" secondAttribute="top" id="xv0-wl-S4z"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -154,7 +157,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="22w-1l-P1b"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ocj-lI-NPX" firstAttribute="top" secondItem="ZGl-Hk-v42" secondAttribute="topMargin" id="3kh-qo-tbj"/>
                             <constraint firstItem="ocj-lI-NPX" firstAttribute="leading" secondItem="ZGl-Hk-v42" secondAttribute="leadingMargin" id="8A8-dc-tm9"/>
@@ -183,7 +186,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNq-X5-65b">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1165.6666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1198.6666666666667"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dcC-dy-bj7">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
@@ -260,7 +263,7 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szd-jo-Qig">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szd-jo-Qig">
                                                         <rect key="frame" x="111" y="153.33333333333337" width="139" height="19.666666666666657"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="movieDescription">
@@ -290,7 +293,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="FNq-X5-65b" firstAttribute="height" secondItem="pVF-v2-Ev1" secondAttribute="height" multiplier="1.75" id="89b-An-C7N"/>
+                                    <constraint firstItem="FNq-X5-65b" firstAttribute="height" secondItem="pVF-v2-Ev1" secondAttribute="height" multiplier="1.8" id="89b-An-C7N"/>
                                     <constraint firstItem="FNq-X5-65b" firstAttribute="width" secondItem="pVF-v2-Ev1" secondAttribute="width" id="BOt-IV-PB9"/>
                                     <constraint firstAttribute="trailing" secondItem="FNq-X5-65b" secondAttribute="trailing" id="XPF-HA-oe8"/>
                                     <constraint firstAttribute="bottom" secondItem="FNq-X5-65b" secondAttribute="bottom" id="ehA-b7-BoC"/>
@@ -348,7 +351,7 @@
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ve-O1-oDV">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="jgB-fg-vZ2" kind="relationship" relationship="viewControllers" id="xVb-cd-e69"/>
@@ -365,7 +368,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mw7-oY-ATU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Posters" image="doc.richtext" catalog="system" id="DwP-OW-gse"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xRO-6Y-cfr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="xRO-6Y-cfr">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -380,13 +383,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="32o-i1-7Im"/>
+        <segue reference="jO3-OY-XkB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.richtext" catalog="system" width="115" height="128"/>
         <image name="film" catalog="system" width="128" height="93"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
