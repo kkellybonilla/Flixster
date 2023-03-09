@@ -19,8 +19,9 @@ class MovieCell: UITableViewCell {
         movieTitleLabel.text = movie.title
         movieDescriptionLabel.text = movie.overview
         
+        let posterImage = URL(string: "https://www.themoviedb.org/t/p/w1280" + movie.posterPath)
         // Load image async via Nuke library image loading helper method
-        Nuke.loadImage(with: movie.posterImage, into: movieImageView)
+        Nuke.loadImage(with: posterImage!, into: movieImageView)
     }
     
     override func awakeFromNib() {

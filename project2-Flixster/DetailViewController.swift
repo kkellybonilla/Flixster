@@ -24,8 +24,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let backdropImage = URL(string: "https://www.themoviedb.org/t/p/w1066_and_h600_bestv2" + movie.backdropPath)
+        
         // Load the image located at the `backdropImageView` URL and set it on the image view.
-        Nuke.loadImage(with: movie.backdropImage, into: backdropImageView)
+        Nuke.loadImage(with: backdropImage!, into: backdropImageView)
         
         movieDetailTitleLabel.text = movie.title
         movieDetailDescriptionLabel.text = movie.overview
