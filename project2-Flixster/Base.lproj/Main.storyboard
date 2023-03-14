@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="project2_Flixster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eAe-3h-K6i">
-                                <rect key="frame" x="0.0" y="59" width="393" height="724"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="180" id="Evr-Jv-bKo" customClass="MovieCell" customModule="project2_Flixster" customModuleProvider="target">
@@ -180,14 +179,14 @@
             <objects>
                 <viewController id="c0T-wV-qb6" customClass="DetailViewController" customModule="project2_Flixster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O8p-vi-YBk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVF-v2-Ev1">
-                                <rect key="frame" x="0.0" y="59" width="393" height="724"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNq-X5-65b">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1448"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1332"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dcC-dy-bj7">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
@@ -265,7 +264,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szd-jo-Qig">
-                                                        <rect key="frame" x="87.666666666666686" y="153.33333333333331" width="186" height="19.666666666666657"/>
+                                                        <rect key="frame" x="111" y="153.33333333333337" width="139" height="19.666666666666657"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="movieDescription">
                                                                 <attributes>
@@ -280,34 +279,13 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxR-st-lmW">
-                                                <rect key="frame" x="103.66666666666669" y="459" width="186" height="34.666666666666686"/>
-                                                <color key="tintColor" systemColor="tintColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="See Similar Movies">
-                                                            <attributes>
-                                                                <font key="NSFont" size="17" name="Verdana"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="xDd-R8-dTQ"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="dcC-dy-bj7" firstAttribute="centerX" secondItem="FNq-X5-65b" secondAttribute="centerX" id="26A-Q6-V88"/>
                                             <constraint firstItem="aDC-5g-mty" firstAttribute="top" secondItem="dcC-dy-bj7" secondAttribute="bottom" constant="20" id="5K3-CW-cpE"/>
-                                            <constraint firstItem="hxR-st-lmW" firstAttribute="top" secondItem="aDC-5g-mty" secondAttribute="bottom" constant="16" id="ENQ-We-eAN"/>
                                             <constraint firstItem="aDC-5g-mty" firstAttribute="leading" secondItem="FNq-X5-65b" secondAttribute="leading" constant="16" id="a7X-Wh-cM0"/>
-                                            <constraint firstItem="hxR-st-lmW" firstAttribute="centerX" secondItem="aDC-5g-mty" secondAttribute="centerX" id="bIs-vP-UjO"/>
                                             <constraint firstAttribute="trailing" secondItem="aDC-5g-mty" secondAttribute="trailing" constant="16" id="cG7-Hn-DL3"/>
-                                            <constraint firstItem="hxR-st-lmW" firstAttribute="width" secondItem="szd-jo-Qig" secondAttribute="width" id="esa-OB-Erv"/>
                                             <constraint firstItem="dcC-dy-bj7" firstAttribute="top" secondItem="FNq-X5-65b" secondAttribute="top" id="wQK-uZ-zDs"/>
                                             <constraint firstItem="aDC-5g-mty" firstAttribute="centerX" secondItem="dcC-dy-bj7" secondAttribute="centerX" id="yTp-rM-Ew5"/>
                                         </constraints>
@@ -407,13 +385,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jO3-OY-XkB"/>
-        <segue reference="xDd-R8-dTQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.richtext" catalog="system" width="115" height="128"/>
         <image name="film" catalog="system" width="128" height="93"/>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
