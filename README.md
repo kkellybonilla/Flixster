@@ -27,7 +27,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='project-flixsterpt2-portrait.gif' title='Flixster App Walkthrough (Portrait)' width='' alt='Flixster App Walkthrough (Portrait)' />
+<img src='project-flixsterpt2-landscape.gif' title='Flixster App Walkthrough (Landscape)' width='' alt='Flixster App Walkthrough (Landscape)' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap  
