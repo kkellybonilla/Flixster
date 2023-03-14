@@ -1,3 +1,61 @@
+# Project 3 - *Flixster*
+
+Submitted by: **Kelly Bonilla Guzmán**
+
+**Flixster** is a movie browsing app that provides users detailed information on movies currently playing in theatres by fetching data in real time from The Movie Database (TMBD) API. This information includes the movies titles, description, vote average, vote count, popularity, poster image, and backdrop image. 
+
+Time spent: **5** hours spent in total
+
+## Required Features
+
+The following **required** functionality is completed:
+
+- [X] Implement network call and table view to display a list of movies currently playing (title, description, image)
+- [X] App has a collection view with the same list of movies
+- [X] Uses a tab bar controller to switch between collection view and table view screens
+ 
+The following **optional** features are implemented:
+
+- [ ] Make an additional network call to another end-point.	
+- [ ] Allow users to scroll when context items are off-screen (table view implementation)
+
+The following **additional** features are implemented:
+
+- [X] Allow users to scroll when context items are off-screen (scroll view implementation)
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with LICEcap  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
+
+## Notes
+
+While continuing to build Flixster, I encountered challenges with passing data from the collection view controller to the detail view controller. This week's project was the first time I had to call on knowledge from the previous weeks on top of this week in order to successfully complete my project. Nonetheless, this week's project was also the first time I felt like I truly understood everything I was implementing in my project. I'm glad that the final part of Flixster required me to put together all of the information from weeks 1 through 3 as its infinitely improved my knowledge of Swift and working in Xcode.
+
+## License
+
+    Copyright [yyyy] [name of copyright owner]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
 # Project 2 - *Flixster*
 
 Submitted by: **Kelly Bonilla Guzman**
@@ -43,7 +101,7 @@ GIF created with LICEcap
 
 ## Notes
 
-Once again, I encountered challenges with Autolayout constraints.
+While building Flixster, I encountered challenges with Autolayout constraints. Specifically, I struggled to display the content of my DetailViewController in different device sizes and orientations. Resultantly, I changed my approach and implemented a scroll view in my DetailViewController with a different set of Autolayout constraints. This resolved my challenge, which allowed me to achieve full functionality!
 
 ## License
 
